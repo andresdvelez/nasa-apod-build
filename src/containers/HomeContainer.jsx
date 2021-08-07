@@ -1,3 +1,4 @@
+import "./HomeContainer.css";
 import axios from "axios";
 import { Component } from "react";
 
@@ -5,14 +6,13 @@ const url =
   "https://api.nasa.gov/planetary/apod?api_key=Iy5dgbvHwFL5D4TBrfoLNk4pGxldO2sdPCDwef3u";
 
 class HomeContainer extends Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            data: {}
-        }
-    } 
+    this.state = {
+      data: {},
+    };
+  }
 
   componentDidMount() {
     axios
@@ -24,14 +24,16 @@ class HomeContainer extends Component {
   }
 
   render() {
-      const img = this.state.data
-      console.log(img)
-    return <main>
-        <img src={img.url} alt="" />
-        <div className="img_info">
-            {img.explanation}
+    const data = this.state.data;
+    console.log(data);
+    return (
+      <main>
+        <div className="img__container">
+          <img src={data.url} alt="" />
         </div>
-    </main>;
+        <div className="pictureOfTheDate"><b>P</b>icture of the date: {data.date}</div>
+      </main>
+    );
   }
 }
 

@@ -1,0 +1,17 @@
+.navbar {
+    height: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.navbar__logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.navbar > .navbar__logo > img {
+    width: 40px;
+}

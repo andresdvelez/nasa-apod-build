@@ -1,12 +1,22 @@
-import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//Containers
+import HomeContainer from "./containers/HomeContainer";
 
 //Components
-import HomeContainer from './containers/HomeContainer';
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <HomeContainer />
+    <Router>
+      <Navbar />
+      <main>
+        <Switch>
+          <Route exact path="/" component={HomeContainer} />
+        </Switch>
+      </main>
+    </Router>
   );
 }
 
