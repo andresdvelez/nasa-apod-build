@@ -2,17 +2,11 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 //Components
-import Home from './components/Home'
-import NasaPhoto from './components/NasaPhoto'
+import HomeContainer from './containers/HomeContainer';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Route component={Home} path="/" exact />
-        <Route component={NasaPhoto} path="/nasaphoto" /> 
-      </div>
-    </Router>
+    <HomeContainer />
   );
 }
 
