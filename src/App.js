@@ -1,23 +1,19 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-//Containers
-import HomeContainer from "./containers/HomeContainer";
-
-//Components
 import Navbar from "./components/Navbar/Navbar";
+import HeroSection from "./components/Hero/HeroSection";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Navbar />
       <main>
         <Switch>
-          <Route exact path="/" component={HomeContainer} />
+            <Route exact path='/' component={HeroSection} />
         </Switch>
       </main>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,19 +1,18 @@
 .navbar {
-    height: 40px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    background-color: #000;
-    border-bottom: 2px solid #0b3d91;
+  height: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: #232323;
+  border-bottom: 1px solid #0b3d91;
 }
 
-.navbar__logo {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+.navbar-logo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
-.navbar > .navbar__logo > img {
-    width: 40px;
+.navbar > .navbar-logo > img {
+  width: 40px;
 }
-
