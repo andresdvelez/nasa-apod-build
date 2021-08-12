@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link className="navbar-logo" to="/">
           <img
             src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"
-            alt=""
+            alt="nasa logo"
           />
         </Link>
       </nav>

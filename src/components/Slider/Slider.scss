@@ -1,5 +1,7 @@
 .slides {
   position: relative;
+  bottom: 50px;
+  border-radius: 5px;
   display: grid;
   > .slide {
     grid-area: 1 / -1;

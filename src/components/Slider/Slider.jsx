@@ -17,13 +17,13 @@ const slides = [
     image: "https://www.lanasa.net/application/files/3616/2809/2914/miniatura_Starliner040821jpg.jpg",
   },
   {
-    title: "Mercurio",
+    title: "Mercury",
     subtitle: "Solar system",
     description: "Adventure is never far away",
     image: "https://www.lanasa.net/application/files/3616/2809/2914/miniatura_Starliner040821jpg.jpg",
   },
   {
-    title: "Marte",
+    title: "Mart",
     subtitle: "Solar system",
     description: "Let your dreams come true",
     image: "https://www.lanasa.net/application/files/3616/2809/2914/miniatura_Starliner040821jpg.jpg",
@@ -31,7 +31,7 @@ const slides = [
 ];
 
 const initialState = {
-  slideIndex: 0,
+  slideIndex: 2,
 };
 
 const slidesReducer = (state, event) => {
