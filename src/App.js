@@ -1,11 +1,10 @@
-import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // components
 import Navbar from "./components/Navbar/Navbar";
 
 // screen
-import HeroSection from "./components/Hero/HeroSection";
+import HeroSection from "./scresns/Hero/HeroSection";
 
 const App = () => {
   return (

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Slide.scss";
 
-import useTilt from "./useTilt";
+import useTilt from "../../hooks/useTilt";
 
 function Slide({ slide, offset }) {
   const active = offset === 0 ? true : null;
