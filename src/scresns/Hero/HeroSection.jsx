@@ -2,7 +2,7 @@ import "./HeroSection.css";
 import axios from "axios";
 import { Component } from "react";
 
-import Slider from "../Slider/Slider";
+import Slider from "../../components/Slider/Slider";
 
 const url =
   `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`
