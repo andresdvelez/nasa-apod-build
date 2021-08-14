@@ -1,6 +1,6 @@
 .slides {
   position: relative;
-  bottom: 50px;
+  bottom: 10px;
   border-radius: 5px;
   display: grid;
   > .slide {
@@ -19,7 +19,7 @@
     height: 5rem;
     top: 30%;
     transition: opacity 0.3s;
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: 5;
 
     &:hover {
@@ -31,12 +31,26 @@
     }
 
     &:first-child {
-      top: 50px;
-      left: -70%;
+      top: -5vh;
+      left: -30vw;
     }
     &:last-child {
-      top: 50px;
-      right: -70%;
+      top: -5vh;
+      right: -30vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .slides > button {
+    font-size: 4rem;
+
+    &:first-child {
+      left: -20vw;
+    }
+
+    &:last-child {
+      right: -20vw;
     }
   }
 }

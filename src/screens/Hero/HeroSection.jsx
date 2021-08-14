@@ -30,7 +30,7 @@ class HeroSection extends Component {
     return (
       <div className="hero-container">
         <div className="date-info">
-        {`Picture of the day:`}{data.date}
+        {`Picture of the day: `}{data.date}
         </div>
         <img src={data.url} alt={`Foto de la fecha ${data.date}`} />
         <Slider data={data} />
