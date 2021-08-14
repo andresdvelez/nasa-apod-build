@@ -88,3 +88,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .slideContent {
+    width: 40vw;
+  }
+}
+@media (min-width: 768px) {
+  .slideContent {
+    width: 40vw;
+  }
+}
