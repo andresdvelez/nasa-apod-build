@@ -20,7 +20,6 @@ function useTilt(active) {
       if (!el) {
         return;
       }
-      console.log(state.rect)
       if (!state.rect) {
         state.rect = el.getBoundingClientRect();
       }

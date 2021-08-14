@@ -20,13 +20,11 @@ function Slide({ slide, offset }) {
     >
       <div
         className="slideContent"
-        style={{
-          backgroundImage: `url('${slide.image}')`,
-        }}
       >
+        <img src={`https://image.tmdb.org/t/p/original/${slide.poster_path}`} alt="" />
         <div className="slideContentInner">
           <h2 className="slideTitle">{slide.title}</h2>
-          <h3 className="slideSubtitle">{slide.subtitle}</h3>
+          <h3 className="slideSubtitle">{slide.release_date}</h3>
           <p className="slideDescription">{slide.description}</p>
         </div>
       </div>

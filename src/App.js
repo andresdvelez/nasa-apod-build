@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 
 // screen
-import HeroSection from "./scresns/Hero/HeroSection";
+import HeroSection from "./screens/Hero/HeroSection";
 
 const App = () => {
   return (
