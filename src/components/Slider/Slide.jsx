@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Slide.scss";
 
 import useTilt from "../../hooks/useTilt";
+import { checkImage } from "../../utils/validatorIfEmpty";
 
 function Slide({ slide, offset }) {
   const active = offset === 0 ? true : null;
@@ -9,7 +10,7 @@ function Slide({ slide, offset }) {
 
   return (
     <Link
-      to="/movie"
+      to={`/movies/detail/${slide.id}`}
       ref={ref}
       className="slide"
       data-active={active}
@@ -18,10 +19,10 @@ function Slide({ slide, offset }) {
         "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
       }}
     >
-      <div
-        className="slideContent"
-      >
-        <img src={`https://image.tmdb.org/t/p/original/${slide.poster_path}`} alt="" />
+      <div className="slideContent">
+        <div className="img-container">
+          <img src={checkImage(slide.poster_path)} alt={slide.title} />
+        </div>
         <div className="slideContentInner">
           <h2 className="slideTitle">{slide.title}</h2>
           <h3 className="slideSubtitle">{slide.release_date}</h3>

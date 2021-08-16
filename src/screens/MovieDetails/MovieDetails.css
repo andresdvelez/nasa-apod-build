@@ -1,0 +1,114 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left-container {
+  width: 50vw;
+  height: 50vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.left-container > img {
+  width: 90%;
+  height: 100%;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f9f9f9;
+}
+
+.right-container > .movie-title {
+  margin-bottom: 3vh;
+  padding: 5px;
+  text-shadow: 0 1rem 2rem rgb(0, 0, 0);
+}
+
+.right-container > .about {
+  padding: 5px 10px;
+  text-align: justify;
+  text-shadow: 0 1rem 2rem rgb(0, 0, 0);
+}
+
+.right-container > .about > h4 {
+  margin-bottom: 1.5vh;
+  font-size: 1.3rem;
+}
+
+.info > p {
+  font-size: 1rem;
+}
+
+.info-table {
+  color: #f9f9f9;
+}
+
+.MuiTable-root {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.MuiTableCell-head {
+  color: #f9f9f9 !important;
+}
+
+.MuiTableCell-body {
+  color: #f9f9f9 !important;
+}
+
+.back {
+  margin-top: 2rem;
+  align-content: start;
+}
+
+.back > a {
+  height: 30px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #0b285a;
+  color: #f9f9f9;
+}
+
+.back > a:hover {
+  background-color: #000;
+}
+
+@media (max-width: 576px) {
+  .app {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-container {
+    width: 100%;
+    height: 55vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .right-container > .movie-title {
+    font-size: 1.4rem;
+    margin-bottom: 1vh;
+  }
+}

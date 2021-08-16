@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar/Navbar";
 
 // screen
 import HeroSection from "./screens/Hero/HeroSection";
+import MovieDetails from "./screens/MovieDetails/MovieDetails";
+
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/" component={HeroSection} />
+          <Route path='/movies/detail/:id' component={MovieDetails} />
         </Switch>
       </main>
     </Router>

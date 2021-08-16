@@ -31,12 +31,12 @@
     }
 
     &:first-child {
-      top: -5vh;
-      left: -30vw;
+      top: 24vh;
+      left: -20vw;
     }
     &:last-child {
-      top: -5vh;
-      right: -30vw;
+      top: 24vh;
+      right: -20vw;
     }
   }
 }
@@ -46,10 +46,12 @@
     font-size: 4rem;
 
     &:first-child {
+      top: 5vh;
       left: -20vw;
     }
 
     &:last-child {
+      top: 5vh;
       right: -20vw;
     }
   }
