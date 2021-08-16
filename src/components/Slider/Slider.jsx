@@ -4,15 +4,16 @@ import axios from "axios";
 
 import Slide from "./Slide";
 import { useEffect, useState } from "react";
+import { slidesReducer } from "../../reducer/slidesReducer";
 
 const initialState = {
-  slideIndex: 0,
-  slides: []
+  slideIndex: 0
 };
 
 const Slider = () => {
   const [state, dispatch] = useReducer(slidesReducer, initialState);
   const [slides, setSlides] = useState([]);
+  let unmounted = false
 
   useEffect(() => {
     axios
@@ -26,16 +27,22 @@ const Slider = () => {
         }
       )
       .then((res) => {
-        setSlides(res.data.results);
-        initialState.slides = slides;
+        if (!unmounted) {
+          setSlides(res.data.results);
+          initialState.slides = slides;
+        }
       })
       .catch((error) => console.log(error));
+
+      return () => {
+        unmounted = true
+      }
   }, [slides]);
 
   return (
     <div className="slides">
       <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
-      {[...slides, ...slides, ...slides].map((slide, i) => {
+      {[...slides,...slides, ...slides].map((slide, i) => { 
         let offset = slides.length + (state.slideIndex - i);
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
@@ -44,20 +51,6 @@ const Slider = () => {
   );
 };
 
-const slidesReducer = (state, event) => {
-  if (event.type === "PREV") {
-    return {
-      ...state,
-      slideIndex: (state.slideIndex + 1) % state.slides.length,
-    };
-  }
-  if (event.type === "NEXT") {
-    return {
-      ...state,
-      slideIndex:
-        state.slideIndex === 0 ? state.slides.length - 1 : state.slideIndex - 1,
-    };
-  }
-};
+
 
 export default Slider;

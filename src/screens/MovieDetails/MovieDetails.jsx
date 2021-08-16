@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import { checkImage } from "../../utils/validatorIfEmpty";
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
@@ -31,10 +32,7 @@ const MovieDetails = () => {
       <div className="container">
         <div className="app">
           <div className="left-container">
-            <img
-              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-              alt={movie.title}
-            />
+            <img src={checkImage(movie.poster_path)} alt={movie.title} />
           </div>
           <div className="right-container">
             <div className="movie-title">
@@ -66,9 +64,9 @@ const MovieDetails = () => {
             </div>
           </div>
         </div>
-      <div className="back">
-        <Link to='/'>Back Home</Link>
-      </div>
+        <div className="back">
+          <Link to="/">Back Home</Link>
+        </div>
       </div>
     </>
   );
