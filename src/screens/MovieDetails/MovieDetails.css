@@ -14,7 +14,7 @@
 }
 
 .left-container {
-  width: 50vw;
+  width: 45vw;
   height: 50vh;
   background-size: cover;
   background-position: center center;
@@ -22,7 +22,7 @@
 }
 
 .left-container > img {
-  width: 90%;
+  width: 80%;
   height: 100%;
   padding: 10px;
   border-radius: 3px;
@@ -93,7 +93,7 @@
 
 @media (max-width: 576px) {
   .app {
-    margin-top: 25vh;
+    margin-top: 27vh;
     display: flex;
     flex-direction: column;
   }
