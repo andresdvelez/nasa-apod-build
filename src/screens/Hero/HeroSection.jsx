@@ -1,10 +1,9 @@
 import "./HeroSection.css";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 import { dateFormat } from "../../utils/dateFormatter";
-
 import Slider from "../../components/Slider/Slider";
-import { useEffect, useState } from "react";
 
 const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`;
 
@@ -29,7 +28,7 @@ const HeroSection = () => {
       </div>
       <img src={data.url} alt={`Foto de la fecha ${data.date}`} />
       <h2 className="movies-title">MOVIES</h2>
-      <Slider data={data} />
+      <Slider />
     </div>
   );
 };

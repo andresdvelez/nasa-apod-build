@@ -2,7 +2,7 @@ export const slidesReducer = (state, event) => {
     if (event.type === "PREV") {
       return {
         ...state,
-        slideIndex: (state.slideIndex + 1) % state.slides.length,
+        slideIndex: (state.slideIndex + 1),
       };
     }
     if (event.type === "NEXT") {
