@@ -39,13 +39,26 @@
   margin-top: 10px;
   font-size: 2rem;
   color: #f9f9f9;
+  text-shadow: 0 1rem 2rem rgb(0, 0, 0);
+}
+
+
+@media (max-width: 320px) {
+  .date-info {
+    font-size: 1.1rem !important;
+  }
+
+  .hero-container > .movies-title {
+    font-size: 2rem;
+    margin-bottom: 8vh !important;
+  }
 }
 
 
 @media (max-width: 576px) {
   .hero-container {
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: scroll; 
   }
 
   .date-info {
@@ -86,5 +99,18 @@
 
   .date-info {
       font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .date-info {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-container > .movies-title {
+    margin-top: 5px;
+    margin-bottom: 4vh;
+    font-weight: normal;
+    font-size: 3rem !important;
   }
 }
