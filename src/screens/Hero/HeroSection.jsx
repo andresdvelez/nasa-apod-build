@@ -8,9 +8,7 @@ import Slider from "../../components/Slider/Slider";
 const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`;
 
 const HeroSection = () => {
-  const [data, setData] = useState({
-    date: undefined
-  });
+  const [data, setData] = useState({});
 
   useEffect(() => {
     axios
