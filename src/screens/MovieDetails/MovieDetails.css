@@ -38,7 +38,6 @@
 
 .right-container > .movie-title {
   margin-bottom: 3vh;
-  padding: 5px;
   text-shadow: 0 1rem 2rem rgb(0, 0, 0);
 }
 
@@ -131,10 +130,14 @@
 
   .left-container > img {
     width: 60vw;
+    height: 40vh;
+  }
+
+  .right-container {
+    margin: 5px 10vw;
   }
 
   .right-container > .movie-title {
-    font-size: 1.4rem;
     margin-bottom: 1vh;
   }
 
@@ -145,7 +148,8 @@
 
 @media (max-width: 922px) {
   .left-container {
-    width: 55vh;
+    width: 45vh;
+    height: 45vh;
   }
 }
 
@@ -160,5 +164,11 @@
 @media (min-width: 1200px) {
   .left-container {
     width: 50vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .right-container {
+    width: 40vw;
   }
 }

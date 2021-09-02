@@ -33,7 +33,8 @@ const Slider = () => {
       })
       .catch((error) => console.log(error));
 
-    return () => {
+      return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       unmounted = true;
     };
   }, [slides]);

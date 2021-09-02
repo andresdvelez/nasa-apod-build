@@ -5,7 +5,6 @@
 .slideContent {
   display: flex;
   flex-direction: column;
-  height: 50vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,7 +14,7 @@
   color: #f9f9f9;
 
   > .img-container {
-    margin-left: 10%;
+    margin-left: 13%;
     width: 30vw;
     height: 38vw;
     z-index: 999;
@@ -45,7 +44,6 @@
   .slideTitle {
     font-size: 1.5rem;
     font-weight: normal;
-    letter-spacing: 0.2ch;
     text-transform: uppercase;
     margin: 0;
   }
@@ -83,9 +81,9 @@
 @media (max-width: 320px) {
   .slideContent {
     > .img-container {
-      margin-left: 0 !important;
-      width: 40vw;
-      height: 45vw;
+      margin-left: 6% !important;
+      width: 35vw !important;
+      height: 0vw;
       z-index: 999;
     }
 
@@ -100,8 +98,8 @@
 @media (max-width: 576px) {
   .slideContent {
     > .img-container {
-      margin-left: 0 !important;
-      width: 40vw;
+      margin-left: 5%;
+      width: 35vw;
       height: 45vw;
     }
   }

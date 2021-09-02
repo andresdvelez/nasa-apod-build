@@ -45,12 +45,11 @@
 
 @media (max-width: 320px) {
   .date-info {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
   }
 
   .hero-container > .movies-title {
     font-size: 2rem;
-    margin-bottom: 8vh !important;
   }
 }
 
@@ -102,6 +101,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .hero-container > .movies-title {
+    margin-bottom: 3vh;
+  }
+}
+
 @media (min-width: 1440px) {
   .date-info {
     font-size: 1.5rem !important;
@@ -110,7 +115,6 @@
   .hero-container > .movies-title {
     margin-top: 5px;
     margin-bottom: 4vh;
-    font-weight: normal;
     font-size: 3rem !important;
   }
 }
