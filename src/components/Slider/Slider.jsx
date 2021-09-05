@@ -17,13 +17,7 @@ const Slider = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=nasa`,
-        {
-          headers: {
-            Authorization:
-              "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3N2U2NWMwODkxNTE2ZWUxMTdjNjk1NGM0OWMyOTk3ZSIsInN1YiI6IjYxMTNkNzgyNWM1NjM0MDA1ZGFlOTMzMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4bI-pTdMNGdSFj_iPrQrSNpXjsvcZwY6drBC95r_KTI",
-          },
-        }
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=nasa`
       )
       .then((res) => {
         if (!unmounted) {

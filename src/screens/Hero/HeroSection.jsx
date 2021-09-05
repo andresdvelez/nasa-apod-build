@@ -1,32 +1,30 @@
 import "./HeroSection.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 import { dateFormat } from "../../utils/dateFormatter";
 import Slider from "../../components/Slider/Slider";
-
-const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`;
+import useAxios from "../../hooks/useAxios";
 
 const HeroSection = () => {
-  const [data, setData] = useState({});
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`;
 
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch(console.log);
-  }, []);
+  const { loading, res } = useAxios(url);
+  const { data } = !!res && res;
+  const { date, hdurl } = !!data && data;
 
   return (
     <div className="hero-container">
-      <div className="date-info">
-        Picture of the Day: {dateFormat(data.date)}
-      </div>
-      <img src={data.url} alt={`Foto de la fecha ${data.date}`} />
-      <h2 className="movies-title">MOVIES</h2>
-      <Slider />
+      {loading ? (
+        <div className="alert-loading alert-info text-center">Loading...</div>
+      ) : (
+        <>
+          <div className="date-info">
+            Picture of the Day: {dateFormat(date)}
+          </div>
+          <img src={hdurl} alt={`Foto de la fecha ${date}`} />
+          <h2 className="movies-title">MOVIES</h2>
+          <Slider />
+        </>
+      )}
     </div>
   );
 };
